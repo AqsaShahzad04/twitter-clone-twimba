@@ -10,7 +10,8 @@ export function saveToLocalStorage(data) {
 
 
 function getData() {
-    const tweetsData = JSON.parse(localStorage.getItem('Data'))
+    const tweetsData = JSON.parse(localStorage.getItem('Data')) || data;
+    console.log(tweetsData)
     return tweetsData
 }
 
